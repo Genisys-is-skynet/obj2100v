@@ -9,8 +9,10 @@ class Stockfish {
     private final String path = System.getProperty("user.dir") + "\\stockfish\\Windows\\stockfish_9_x32.exe";
     private OutputStreamWriter writer;
     private BufferedReader reader;
-
-    public void connect()
+    private OutputStreamWriter processWriter;
+    private BufferedReader processReader;
+    
+	public void connect()
     {
         Runtime rt = Runtime.getRuntime();
         Process process = null;
